@@ -3,7 +3,7 @@ import { AiOutlineMinus, AiOutlinePlus } from 'react-icons/ai';
 
 
 
-const Question = ({question}) => {
+const Question = ({title,info}) => {
   const [showInfo, setShowInfo] = useState(true);
   const toggleQuesionInfo = () => {
       console.log('toggle this');
@@ -11,8 +11,8 @@ const Question = ({question}) => {
   }
   return (
     <div>
-      <h4>{question.title} {showInfo ?  <AiOutlineMinus onClick={toggleQuesionInfo}/> : <AiOutlinePlus onClick={toggleQuesionInfo}/>} </h4>
-       <p>{showInfo ? question.info : ''} </p>
+      <h4>{title} {showInfo ?  <AiOutlineMinus onClick={toggleQuesionInfo}/> : <AiOutlinePlus onClick={toggleQuesionInfo}/>} </h4>
+       <p>{showInfo ? info : ''} </p>
     </div>
   )
 };

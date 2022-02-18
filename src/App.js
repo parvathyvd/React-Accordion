@@ -12,7 +12,7 @@ function App() {
            <h2 className='underline'></h2>
           <div className=''>
           {questions.map(question => {
-            return <SingleQuestion question = {question} key={question.id}/>
+            return <SingleQuestion {...question} key={question.id}/>
           })}
           </div>
         </section>
